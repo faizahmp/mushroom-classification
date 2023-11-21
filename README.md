@@ -1,20 +1,18 @@
 # Laporan Proyek Machine Learning - Faizah Mappanyompa
 
 ## Domain Proyek
+![jamur](https://cdn.hourdetroit.com/wp-content/uploads/sites/20/2022/05/mushrooms.jpg)
+<p align="justify">Jamur atau fungi merupakan jenis organisme yang dapat tumbuh di alam. Jamur dibagi menjadi dua jenis, yaitu beracun dan dapat dimakan. Di beberapa daerah pedesaan, jamur menjadi makanan pilihan bagi masyarakat yang hidup di sana. Kesalahan dalam memilih jamur dapat mengakibatkan potensi yang fatal seperti keracunan hingga kematian jika dikonsumsi. Sementara jamur yang aman dapat memberikan nutrisi bagi kesehatan tubuh. Menurut (TUTUNCU et.al, 2022) sulit bagi masyarakat untuk melakukan analisis biokimia setiap hari dan dikarenakan fitur morfologi yang dimiliki jamur mirip serta masyarakat pedesaan yang bukan ahli di bidangnya.
 
-<p class="justify">Jamur atau fungi merupakan jenis organisme yang dapat tumbuh di alam. Jamur dibagi menjadi dua jenis, yaitu beracun dan dapat dimakan. Di beberapa daerah pedesaan, jamur menjadi makanan pilihan bagi masyarakat yang hidup di sana. Kesalahan dalam memilih jamur dapat mengakibatkan potensi yang fatal seperti keracunan hingga kematian jika dikonsumsi. Sementara jamur yang aman dapat memberikan nutrisi bagi kesehatan tubuh. Menurut (TUTUNCU et.al, 2022) sulit bagi masyarakat untuk melakukan analisis biokimia setiap hari dan dikarenakan fitur morfologi yang dimiliki jamur mirip serta masyarakat pedesaan yang bukan ahli di bidangnya.
+Pemanfaatan teknologi machine learning, prediksi jamur dapat mejadi solusi yang potensial untuk mengatasi masalah ini. Dengan pemilihan algoritma machine learning dan dataset yang tepat, dapat membuat suatu sistem yang dapat memprediksi apakah suatu jamur dapat dimakan atau tidak. Penelitian sebelumnya yang telah dilakukan oleh [(TUTUNCU et.al, 2022)][jurnal-1] dapat mengklasifikan jamur yang beracun dan dapat dimakan menggunakan model Decision Tree, Naive Bayes, AdaBoost, dan Support Vector Machine.
 
-Pemanfaatan teknologi machine learning, prediksi jamur dapat mejadi solusi yang potensial untuk mengatasi masalah ini. Dengan pemilihan algoritma machine learning dan dataset yang tepat, dapat membuat suatu sistem yang dapat memprediksi apakah suatu jamur dapat dimakan atau tidak.
-
-Penelitian sebelumnya yang telah dilakukan oleh [(TUTUNCU et.al, 2022)][jurnal-1] dapat mengklasifikan jamur yang beracun dan dapat dimakan menggunakan model Decision Tree, Naive Bayes, AdaBoost, dan Support Vector Machine.
-
-Bedasarkan latar belakang di atas, penulis mengembangkan model machine learning menggunakan model Random Forest untuk memprediksi jamur beracun dan tidak beracun yang dapat memberikan informasi handal kepada masyarakat. </p>
+Bedasarkan latar belakang di atas, penulis mengembangkan model machine learning menggunakan model Random Forest untuk memprediksi jamur beracun dan tidak beracun yang dapat memberikan informasi handal kepada masyarakat.</p>
 
 [jurnal-1]: https://www.researchgate.net/profile/Kemal-Tutuncu-2/publication/361490673_Edible_and_Poisonous_Mushrooms_Classification_by_Machine_Learning_Algorithms/links/62b98c456ec05339cca7d590/Edible-and-Poisonous-Mushrooms-Classification-by-Machine-Learning-Algorithms.pdf
 
 ## Business Understanding
 
-<p class="justify">Pengembangan sistem prediksi jamur menggunakan algoritma machine learning Random Forest untuk membedakan jamur beracun dan dapat dimakan. Langkah ini merupakan langkah yang strategis untuk meningkatkan keamanan dalam mengumpulkan jamur yang dapat dikonsumsi. Solusi ini efektif bagi masyarakat pedesaan, penjelajah alam, hingga pemangku jual-beli yang tertarik dengan jamur.</p>
+<p align="justify">Pengembangan sistem prediksi jamur menggunakan algoritma machine learning Random Forest untuk membedakan jamur beracun dan dapat dimakan. Langkah ini merupakan langkah yang strategis untuk meningkatkan keamanan dalam mengumpulkan jamur yang dapat dikonsumsi. Solusi ini efektif bagi masyarakat pedesaan, penjelajah alam, hingga pemangku jual-beli yang tertarik dengan jamur.</p>
 
 ### Problem Statements
 
@@ -287,17 +285,18 @@ Lakukan pemisahan data train dan data test sebelum masuk ke tahap modelling. Pem
 Untuk mengevaluasi performa model klasifikasi (confusion matrix), metrik evaluasi yang digunakan adalah:
 
 ### Accuracy
-
-\[ \text{Accuracy} = \frac{\text{True Positives} + \text{True Negatives}}{\text{Total Population}} \]
+merepresentasikan model klasifikasi memberikan prediksi yang benar secara keseluruhan
+![Accuracy](https://latex.codecogs.com/svg.latex?%5Cdpi%7B300%7D%20%5Csmall%20%5Cbg_white%20%5Cfn_cm%20%5Ctext%7BAccuracy%7D%20%3D%20%5Cfrac%7B%5Ctext%7BTrue%20Positives%7D%20%2B%20%5Ctext%7BTrue%20Negatives%7D%7D%7B%5Ctext%7BTotal%20Population%7D%7D)
 
 ### Precision
-
-\[ \text{Precision} = \frac{\text{True Positives}}{\text{True Positives} + \text{False Positives}} \]
+merepresentasikan prediksi positif model adalah benar, atau berapa persentase prediksi positif yang sebenarnya positif.
+![Precision](https://latex.codecogs.com/svg.latex?%5Cdpi%7B300%7D%20%5Csmall%20%5Cbg_white%20%5Cfn_cm%20%5Ctext%7BPrecision%7D%20%3D%20%5Cfrac%7B%5Ctext%7BTrue%20Positives%7D%7D%7B%5Ctext%7BTrue%20Positives%7D%20%2B%20%5Ctext%7BFalse%20Positives%7D%7D)
 
 ### Recall
-
-\[ \text{Recall} = \frac{\text{True Positives}}{\text{True Positives} + \text{False Negatives}} \]
+merepresentasikan sejauh mana model dapat mengidentifikasi dengan benar semua instance yang seharusnya positif.
+![Recall](https://latex.codecogs.com/svg.latex?%5Cdpi%7B300%7D%20%5Csmall%20%5Cbg_white%20%5Cfn_cm%20%5Ctext%7BRecall%7D%20%3D%20%5Cfrac%7B%5Ctext%7BTrue%20Positives%7D%7D%7B%5Ctext%7BTrue%20Positives%7D%20%2B%20%5Ctext%7BFalse%20Negatives%7D%7D)
 
 ### F1 Score
+gabungan dari recall dan presisi.
 
-\[ \text{F1 Score} = 2 \times \frac{\text{Precision} \times \text{Recall}}{\text{Precision} + \text{Recall}} \]
+![F1 Score](https://latex.codecogs.com/svg.latex?%5Cdpi%7B300%7D%20%5Csmall%20%5Cbg_white%20%5Cfn_cm%20%5Ctext%7BF1%20Score%7D%20%3D%202%20%5Ctimes%20%5Cfrac%7B%5Ctext%7BPrecision%7D%20%5Ctimes%20%5Ctext%7BRecall%7D%7D%7B%5Ctext%7BPrecision%7D%20%2B%20%5Ctext%7BRecall%7D%7D)
